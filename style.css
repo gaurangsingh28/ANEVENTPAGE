@@ -1,0 +1,152 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.logo{
+    width:120px;
+    padding:20px 0;
+    cursor: pointer;
+}
+.cart-icon{
+    width: 30px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 55px 30px;
+}
+nav ul li a{
+    color: cornsilk;
+    text-decoration: double;
+    position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width:0;
+    height: 3px;
+    position:absolute;
+    bottom:-5px;
+    left: 50%;
+    transform:translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 50%;
+}
+
+.content{
+    top: 50%;
+    position: absolute;
+    transform:translate(5%);
+    color:#fff;
+}
+.content h1{
+    font-size: 54px;
+    font-weight: 600;
+}
+.content h1 span{
+    color:crimson;
+}
+.content button{
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.content button img{
+    width: 15px;
+    margin-left: 10px;
+}
+.launch-time{
+    display: flex;
+}
+.launch-time div{
+    flex-basis: 100px;
+}
+.launch-time div p{
+    font-size: 40px;
+    /* margin-bottom: -14px; */
+}
+.rocket{
+    width: 150px;
+    position:absolute;
+    right: 10%;
+    bottom: 0;
+    animation:rocket 4s linear infinite;
+}
+@keyframes rocket{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    100%{
+        bottom: 105%;
+        opacity:1;
+    }
+}
+
+
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.about .row .image{
+    flex:1 1 45rem;
+    padding:1rem;
+}
+
+.about .row .image img{ 
+    width: 100%;
+    border-radius: .5rem;
+    border:1rem solid #333;
+}
+
+.about .row .content{
+    flex:1 1 45rem;
+}
+
+.about .row .content h3{
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color:#eee;
+    padding:1rem 0;
+    line-height: 2;
+}
